@@ -1,0 +1,12 @@
+server:
+  port: 8083
+user.authentication.url: http://qa-api1.livfame.com/v1/auth/isAuthenticated
+backend.server.url: http://localhost:8081
+
+spring.datasource.url: jdbc:mysql://localhost:3306/quizzoda
+spring.datasource.username: root
+spring.datasource.password: igdefault
+spring.datasource.driverClassName: com.mysql.jdbc.Driver
+spring.jpa.hibernate.ddl-auto: update
+#spring.jpa.hibernate.ddl-auto: create-drop
+spring.jpa.show-sql: true
