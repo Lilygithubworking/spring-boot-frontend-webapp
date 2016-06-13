@@ -8,6 +8,7 @@ public class RequestResponseDTO {
     private Integer status;
     private Object data;
     private String nextCursor;
+    private boolean isActionDone;
 
     public RequestResponseDTO() {
         status = 2011;
@@ -22,6 +23,14 @@ public class RequestResponseDTO {
                 ", data=" + data +
                 ", nextCursor='" + nextCursor + '\'' +
                 '}';
+    }
+
+    public boolean isActionDone() {
+        return isActionDone;
+    }
+
+    public void setIsActionDone(boolean isActionDone) {
+        this.isActionDone = isActionDone;
     }
 
     public String getMessage() {
