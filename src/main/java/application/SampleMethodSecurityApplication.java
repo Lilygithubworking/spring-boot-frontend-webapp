@@ -17,8 +17,8 @@
 package application;
 
 import application.utils.authsecurity.ApplicationSecurity;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
@@ -43,7 +43,9 @@ public class SampleMethodSecurityApplication extends WebMvcConfigurerAdapter {
     }
 
     public static void main(String[] args) throws Exception {
-        new SpringApplicationBuilder(SampleMethodSecurityApplication.class).run(args);
+        SpringApplication app = new SpringApplication(SampleMethodSecurityApplication.class);
+        app.setShowBanner(true);
+        app.run(args);
     }
 
 
